@@ -61,6 +61,11 @@
         header h1 {
             margin: 0;
         }
+        header img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-top: 1em;
+        }
         nav {
             background-color: #005577;
             padding: 0.5em;
@@ -108,18 +113,35 @@
         footer a {
             color: #f4f4f4;
         }
+        .contact-links a {
+            margin-right: 1em;
+        }
+        .references p {
+            margin: 0.5em 0;
+        }
+        .pictures img {
+            max-width: 300px;
+            margin: 1em 0;
+        }
+        .pictures p {
+            margin: 0.5em 0;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Kaveh Dastouri</h1>
         <p>Postdoctoral Researcher in Algebra</p>
+        <img src="p1.jpg" alt="Kaveh Dastouri Profile Picture">
         <nav>
             <a href="#biography">Biography</a>
             <a href="#education">Education</a>
             <a href="#research-experience">Research Experience</a>
             <a href="#research-interests">Research Interests</a>
+            <a href="#current-projects">Current Projects</a>
             <a href="#publications">Publications</a>
+            <a href="#pictures">Pictures</a>
+            <a href="#references">References</a>
         </nav>
     </header>
 
@@ -148,7 +170,6 @@
                             <li><strong>Thesis:</strong> Monomial characters and structure of finite groups</li>
                             <li><strong>Supervisor:</strong> Prof. Ali Iranmanesh</li>
                             <li><strong>Advisor:</strong> Prof. Mohsen Ghasemi</li>
-                            <li><strong>GPA without thesis:</strong> 18.25/20</li>
                         </ul>
                     </td>
                 </tr>
@@ -162,7 +183,6 @@
                         <ul>
                             <li><strong>Thesis:</strong> Irreducible characters of even degree and normal Sylow 2-subgroups</li>
                             <li><strong>Supervisor:</strong> Prof. Kamal Aziziheris</li>
-                            <li><strong>GPA without thesis:</strong> 17.23/20</li>
                         </ul>
                     </td>
                 </tr>
@@ -170,13 +190,6 @@
                     <td><strong>BS (Mathematics Education)</strong></td>
                     <td>Farhangian University</td>
                     <td>2013 - 2017</td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <ul>
-                            <li><strong>GPA:</strong> 16.23/20</li>
-                        </ul>
-                    </td>
                 </tr>
             </table>
         </section>
@@ -211,6 +224,16 @@
             </ul>
         </section>
 
+        <section id="current-projects">
+            <h2>Current Projects</h2>
+            <ul>
+                <li>Researching π-partial character degrees and their influence on the structure of groups.</li>
+                <li>Engaging with classical number theory problems, applying representation theory approaches.</li>
+                <li>Creating public key cryptosystems.</li>
+                <li>Creating a package for π-partial characters and π-structure of groups in GAP.</li>
+            </ul>
+        </section>
+
         <section id="publications">
             <h2>Publications</h2>
             <h3>Journal Articles</h3>
@@ -236,10 +259,42 @@
                 <li>A. Iranmanesh and K. Dastouri, “π-structure and π-characters,” <em>17th International Group Theory Conference of Iran</em>, January 29–30, 2025.</li>
             </ol>
         </section>
+
+        <section id="pictures">
+            <h2>Pictures</h2>
+            <div class="pictures">
+                <img src="p3.jpg" alt="Kaveh Dastouri with Prof. Iranmanesh">
+                <p>Me and Prof. Iranmanesh, 2023</p>
+                <img src="p4.jpg" alt="Kaveh Dastouri with Prof. Darafsheh">
+                <p>Me and Prof. Darafsheh, 2024</p>
+            </div>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <div class="references">
+                <p><strong>Prof. Ali Iranmanesh</strong><br>
+                Faculty of Mathematical Science, Tarbiat Modares University<br>
+                Email: <a href="mailto:iranmana@modares.ac.ir">iranmana@modares.ac.ir</a></p>
+                <p><strong>Prof. Mohammad Reza Darafsheh</strong><br>
+                School of Mathematics, Statistics and Computer Science, University of Tehran<br>
+                Email: <a href="mailto:darafsheh@ut.ac.ir">darafsheh@ut.ac.ir</a></p>
+                <p><strong>Dr. Ali Rajaei</strong><br>
+                Faculty of Mathematical Science, Tarbiat Modares University<br>
+                Email: <a href="mailto:alirajaei@modares.ac.ir">alirajaei@modares.ac.ir</a></p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>Contact: <a href="mailto:k.dastouri@modares.ac.ir">k.dastouri@modares.ac.ir</a></p>
+        <h2>Contact</h2>
+        <div class="contact-links">
+            <a href="mailto:kavehdastouri45@gmail.com">kavehdastouri45@gmail.com</a> |
+            <a href="mailto:k.dastouri@modares.ac.ir">k.dastouri@modares.ac.ir</a> |
+            <a href="https://www.researchgate.net/profile/Kaveh-Dastouri">ResearchGate</a> |
+            <a href="https://orcid.org/0000-0001-8075-5515">ORCID</a> |
+            <a href="tel:+989355981867">+989355981867</a>
+        </div>
         <p>&copy; 2025 Kaveh Dastouri</p>
     </footer>
 </body>
