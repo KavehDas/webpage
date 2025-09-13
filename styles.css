@@ -1,107 +1,109 @@
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    line-height: 1.7;
+    background: #f5f6fa;
     color: #333;
 }
 
-header {
-    background: linear-gradient(135deg, #005577, #0077b6);
-    color: white;
-    text-align: center;
-    padding: 2em 1em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+h1, h2, h3 {
+    font-family: 'Lora', serif;
 }
 
-.header-content {
-    max-width: 800px;
-    margin: 0 auto;
+header {
+    background: linear-gradient(135deg, #004466, #0077b6);
+    text-align: center;
+    color: white;
+    padding: 2em 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
-    max-width: 150px;
+    max-width: 140px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 4px solid white;
     margin-bottom: 1em;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 
 header p {
-    margin: 0.5em 0;
+    margin: 0.3em 0;
     font-size: 1.2em;
+    font-weight: 300;
 }
 
 nav {
+    display: flex;
+    justify-content: center;
+    background: #003d5b;
     position: sticky;
     top: 0;
-    background-color: #003d5b;
-    padding: 0.75em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 10;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 1.5em;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 0.8em 1.2em;
+    display: block;
+    transition: background 0.3s ease;
 }
 
 nav a:hover {
-    color: #90e0ef;
+    background: #005f8a;
 }
 
 main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2em 1em;
+    max-width: 950px;
+    margin: 2em auto;
+    padding: 2em;
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-}
-
-section {
-    margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
     color: #005577;
     border-bottom: 2px solid #0077b6;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.2em;
     margin-bottom: 1em;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1em;
+    margin: 1em 0;
+    background: #fafafa;
 }
 
 th, td {
-    border: 1px solid #e0e0e0;
-    padding: 0.75em;
+    border: 1px solid #ddd;
+    padding: 0.8em;
     text-align: left;
 }
 
 th {
-    background-color: #005577;
+    background: #005577;
     color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
 }
 
 ul, ol {
     margin: 1em 0;
     padding-left: 2em;
-}
-
-ul li, ol li {
-    margin-bottom: 0.5em;
 }
 
 .pictures {
@@ -112,27 +114,23 @@ ul li, ol li {
 
 .picture-item img {
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .picture-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .picture-item p {
-    margin: 0.5em 0;
     text-align: center;
     font-style: italic;
-}
-
-.references p {
-    margin: 1em 0;
+    margin-top: 0.5em;
 }
 
 footer {
-    background: linear-gradient(135deg, #005577, #0077b6);
+    background: #003d5b;
     color: white;
     text-align: center;
     padding: 1.5em;
@@ -140,39 +138,35 @@ footer {
 }
 
 footer h2 {
-    color: white;
-    border-bottom: none;
     margin-bottom: 0.5em;
 }
 
-.contact-links {
-    margin-bottom: 1em;
-}
-
 .contact-links a {
-    color: #caf0f8;
+    color: #a8e6ff;
     text-decoration: none;
-    margin: 0 1em;
-    transition: color 0.3s ease;
+    margin: 0 0.8em;
 }
 
 .contact-links a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
-.contact-links i {
-    margin-right: 0.5em;
+.cv-download {
+    color: #ffdddd;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
+.cv-download:hover {
+    color: white;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-wrap: wrap;
     }
     nav a {
-        margin: 0 0.5em;
-        font-size: 0.9em;
-    }
-    .pictures {
-        grid-template-columns: 1fr;
+        flex: 1 1 50%;
+        text-align: center;
     }
 }
