@@ -1,55 +1,47 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaveh Dastouri - Academic Website</title>
+    <meta name="description" content="Kaveh Dastouri, Postdoctoral Researcher in Algebra at Tarbiat Modares University, specializing in representation theory and finite groups.">
+    <meta name="keywords" content="Kaveh Dastouri, algebra, representation theory, finite groups, postdoctoral researcher, Tarbiat Modares University, BICMR">
+    <meta name="author" content="Kaveh Dastouri">
+    <title>Kaveh Dastouri - Postdoctoral Researcher in Algebra</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Kaveh Dastouri",
+        "jobTitle": "Postdoctoral Researcher in Algebra",
+        "affiliation": [
+            {
+                "@type": "Organization",
+                "name": "Tarbiat Modares University",
+                "department": "Department of Pure Mathematics"
+            },
+            {
+                "@type": "Organization",
+                "name": "Beijing International Center for Mathematical Research (BICMR)"
+            }
+        ],
+        "url": "https://kavehdas.github.io/webpage/",
+        "email": "kavehdastouri45@gmail.com",
+        "sameAs": [
+            "https://www.researchgate.net/profile/Kaveh-Dastouri",
+            "https://orcid.org/0000-0001-8075-5515"
+        ],
+        "image": "https://kavehdas.github.io/webpage/p1.jpg",
+        "description": "Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups, currently at Tarbiat Modares University, with an upcoming position at BICMR."
+    }
+    </script>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="p1.jpg" alt="Kaveh Dastouri Profile Picture" class="profile-pic">
+            <img src="p1.jpg" alt="Kaveh Dastouri, Postdoctoral Researcher in Algebra" class="profile-pic">
             <h1>Kaveh Dastouri</h1>
             <p>Postdoctoral Researcher in Algebra</p>
         </div>
@@ -158,14 +150,14 @@
             <h2>Publications</h2>
             <h3>Journal Articles</h3>
             <ol>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Monomial Isaacs π-partial characters and derived length,” <em>Journal of Algebra and Its Applications</em>, vol. 24, no. 04, 2550108, 2025. <a href="https://doi.org/10.1142/S0219498825501087">DOI</a></li>
-                <li>K. Dastouri and A. Iranmanesh, “Primes and degrees of Isaacs π-partial characters,” <em>Communications in Algebra</em>, vol. 53, no. 6, pp. 2523–2527, 2025. <a href="https://doi.org/10.1080/00927872.2024.2446543">DOI</a></li>
+                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Monomial Isaacs π-partial characters and derived length,” <em>Journal of Algebra and Its Applications</em>, vol. 24, no. 04, 2550108, 2025. <a href="https://doi.org/10.1142/S0219498825501087" target="_blank" rel="noopener">DOI</a></li>
+                <li>K. Dastouri and A. Iranmanesh, “Primes and degrees of Isaacs π-partial characters,” <em>Communications in Algebra</em>, vol. 53, no. 6, pp. 2523–2527, 2025. <a href="https://doi.org/10.1080/00927872.2024.2446543" target="_blank" rel="noopener">DOI</a></li>
                 <li>K. Dastouri and M. Ghasemi, “Groups with prime power Isaacs π-partial character codegrees,” (to appear in <em>Journal of Algebra and Its Applications</em>), 2025.</li>
                 <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Primes and Degrees of Isaacs π-partial Character II,” (Submitted), 2025.</li>
             </ol>
             <h3>Preprints</h3>
             <ol>
-                <li>K. Dastouri, “Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli,” Cryptology ePrint Archive, Report 2025/1589, 2025. <a href="https://eprint.iacr.org/2025/1589">ePrint</a></li>
+                <li>K. Dastouri, “Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli,” Cryptology ePrint Archive, Report 2025/1589, 2025. <a href="https://eprint.iacr.org/2025/1589" target="_blank" rel="noopener">ePrint</a></li>
             </ol>
             <h3>Conference Proceedings</h3>
             <ol>
@@ -184,11 +176,11 @@
             <h2>Pictures</h2>
             <div class="pictures">
                 <div class="picture-item">
-                    <img src="p3.jpg" alt="Kaveh Dastouri with Prof. Iranmanesh">
+                    <img src="p3.jpg" alt="Kaveh Dastouri with Prof. Ali Iranmanesh, 2023">
                     <p>Me and Prof. Iranmanesh, 2023</p>
                 </div>
                 <div class="picture-item">
-                    <img src="p4.jpg" alt="Kaveh Dastouri with Prof. Darafsheh">
+                    <img src="p4.jpg" alt="Kaveh Dastouri with Prof. Mohammad Reza Darafsheh, 2024">
                     <p>Me and Prof. Darafsheh, 2024</p>
                 </div>
             </div>
@@ -215,13 +207,46 @@
         <div class="contact-links">
             <a href="mailto:kavehdastouri45@gmail.com"><i class="fa-solid fa-envelope"></i> kavehdastouri45@gmail.com</a> |
             <a href="mailto:k.dastouri@modares.ac.ir"><i class="fa-solid fa-envelope"></i> k.dastouri@modares.ac.ir</a> |
-            <a href="https://www.researchgate.net/profile/Kaveh-Dastouri"><i class="fa-solid fa-globe"></i> ResearchGate</a> |
-            <a href="https://orcid.org/0000-0001-8075-5515"><i class="fa-solid fa-globe"></i> ORCID</a> |
-            <a href="https://KavehDas.github.io/webpage"><i class="fa-solid fa-globe"></i> Personal Website</a> |
+            <a href="https://www.researchgate.net/profile/Kaveh-Dastouri" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> ResearchGate</a> |
+            <a href="https://orcid.org/0000-0001-8075-5515" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> ORCID</a> |
+            <a href="https://kavehdas.github.io/webpage/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Personal Website</a> |
             <a href="tel:+989355981867"><i class="fa-solid fa-phone"></i> +989355981867</a>
         </div>
         <p><a href="cv.pdf" class="cv-download"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
         <p>&copy; 2025 Kaveh Dastouri</p>
     </footer>
+
+    <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+            return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+                try {
+                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                    var firstSheetName = workbook.SheetNames[0];
+                    var worksheet = workbook.Sheets[firstSheetName];
+                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                    var filteredData = jsonData.filter(row => row.some(filledCell));
+                    var headerRowIndex = filteredData.findIndex((row, index) =>
+                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                    );
+                    if (headerRowIndex === -1 || headerRowIndex > 25) {
+                        headerRowIndex = 0;
+                    }
+                    var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                    csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                    return csv;
+                } catch (e) {
+                    console.error(e);
+                    return "";
+                }
+            }
+            return gk_fileData[filename] || "";
+        }
+    </script>
 </body>
 </html>
