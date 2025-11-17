@@ -3,230 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kaveh Dastouri, Postdoctoral Researcher in Algebra at Tarbiat Modares University, specializing in representation theory and finite groups.">
-    <meta name="keywords" content="Kaveh Dastouri, algebra, representation theory, finite groups, postdoctoral researcher, Tarbiat Modares University, BICMR">
-    <meta name="author" content="Kaveh Dastouri">
-    <link rel="canonical" href="https://kavehdas.github.io/webpage/">
-    <meta property="og:title" content="Kaveh Dastouri - Postdoctoral Researcher in Algebra">
-    <meta property="og:description" content="Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups at Tarbiat Modares University.">
-    <meta property="og:image" content="https://kavehdas.github.io/webpage/p1.jpg">
-    <meta property="og:url" content="https://kavehdas.github.io/webpage/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kaveh Dastouri - Postdoctoral Researcher in Algebra">
-    <meta name="twitter:description" content="Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups at Tarbiat Modares University.">
-    <meta name="twitter:image" content="https://kavehdas.github.io/webpage/p1.jpg">
     <title>Kaveh Dastouri - Postdoctoral Researcher in Algebra</title>
-
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="p5.ico">
-    <link rel="shortcut icon" href="p5.ico">
-    <link rel="apple-touch-icon" href="p5.ico">
-
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Kaveh Dastouri",
-        "jobTitle": "Postdoctoral Researcher in Algebra",
-        "affiliation": [
-            {"@type": "Organization", "name": "Tarbiat Modares University", "department": "Department of Pure Mathematics"},
-            {"@type": "Organization", "name": "Beijing International Center for Mathematical Research (BICMR)"}
-        ],
-        "url": "https://kavehdas.github.io/webpage/",
-        "email": "kavehdastouri45@gmail.com",
-        "sameAs": [
-            "https://www.researchgate.net/profile/Kaveh-Dastouri",
-            "https://orcid.org/0000-0001-8075-5515",
-            "https://scholar.google.com/citations?user=49OkBRkAAAAJ&hl=en"
-        ],
-        "image": "https://kavehdas.github.io/webpage/p1.jpg",
-        "description": "Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups, currently at Tarbiat Modares University, with an upcoming position at BICMR."
-    }
-    </script>
-
-    <!-- This CSS hides all sections except the active one -->
     <style>
-        section {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
-        }
-        section.active {
-            display: block;
-            opacity: 1;
-        }
+        .slim-header{background:linear-gradient(135deg,#005577,#0077b6);padding:2rem;box-shadow:0 4px 15px rgba(0,0,0,0.2);position:relative}
+        .header-container{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
+        .profile-pic-slim{width:130px;height:130px;border-radius:50%;border:5px solid white;object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,0.3)}
+        .header-text h1{margin:0;font-size:2.4em;color:white}
+        .header-text p{margin:0.4em 0 1em;color:#caf0f8;font-size:1.3em}
+        .header-text nav a{color:white;text-decoration:none;margin:0 1.2rem;font-weight:500;font-size:1.05em}
+        .header-text nav a:hover{color:#90e0ef}
+        #dark-mode-toggle{position:absolute;top:1.5rem;right:2rem;background:none;border:none;font-size:1.8em;color:white;cursor:pointer}
+        main{padding:4rem 2rem;text-align:center;background:#f8f9fa;min-height:70vh}
+        body.dark-mode{background:#0f0f0f;color:#e0e0e0}
+        body.dark-mode .slim-header{background:linear-gradient(135deg,#003050,#004070)}
+        body.dark-mode main{background:#1a1a1a}
+        #back-to-top{position:fixed;bottom:30px;right:30px;background:#0077b6;color:white;border:none;width:56px;height:56px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.4);display:none;z-index:999}
+        @media(max-width:768px){.header-container{flex-direction:column;text-align:center}.header-text nav a{display:block;margin:0.8rem 0}}
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="header-content">
-            <img src="p1.png" alt="Kaveh Dastouri, Postdoctoral Researcher in Algebra" class="profile-pic">
-            <h1>Kaveh Dastouri</h1>
-            <p>Postdoctoral Researcher in Algebra</p>
+    <header class="slim-header">
+        <div class="header-container">
+            <img src="p1.png" alt="Kaveh Dastouri" class="profile-pic-slim">
+            <div class="header-text">
+                <h1>Kaveh Dastouri</h1>
+                <p>Postdoctoral Researcher in Algebra</p>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about-me.html">About Me</a>
+                    <a href="education.html">Education</a>
+                    <a href="research-experience.html">Research Experience</a>
+                    <a href="research-interests.html">Research Interests</a>
+                    <a href="current-projects.html">Current Projects</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="pictures.html">Pictures</a>
+                    <a href="references.html">References</a>
+                </nav>
+            </div>
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
         </div>
-        <nav>
-            <a href="#about-me"           onclick="showSection('about-me')">About Me</a>
-            <a href="#education"          onclick="showSection('education')">Education</a>
-            <a href="#research-experience" onclick="showSection('research-experience')">Research Experience</a>
-            <a href="#research-interests" onclick="showSection('research-interests')">Research Interests</a>
-            <a href="#current-projects"   onclick="showSection('current-projects')">Current Projects</a>
-            <a href="#publications"       onclick="showSection('publications')">Publications</a>
-            <a href="#pictures"           onclick="showSection('pictures')">Pictures</a>
-            <a href="#references"         onclick="showSection('references')">References</a>
-        </nav>
     </header>
 
     <main>
-        <section id="about-me" class="active">
-            <h2>About Me</h2>
-            <p>My name is Kaveh Dastouri, and I was born in Heris, East Azerbaijan, Iran, in 1995. I completed my bachelor’s degree at Farhangian University, followed by a master’s degree in algebra at the University of Tabriz. I then earned my Ph.D. in mathematics at Tarbiat Modares University in Tehran under the supervision of <a href="https://www.modares.ac.ir/~iranmana" target="_blank" rel="noopener">Prof. Ali Iranmanesh</a>. Currently, I am a postdoctoral researcher at Tarbiat Modares University specializing in algebra, focusing on representation theory and finite groups, and I will soon begin a new postdoctoral position at the Beijing International Center for Mathematical Research (BICMR).</p>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <table>
-                <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
-                <tr><td><strong>PhD (Algebra)</strong></td><td>Faculty of Mathematical Science, Tarbiat Modares University</td><td>2020 - 2023</td></tr>
-                <tr><td colspan="3">
-                    <ul>
-                        <li><strong>Thesis:</strong> Monomial characters and structure of finite groups</li>
-                        <li><strong>Supervisor:</strong> Prof. Ali Iranmanesh</li>
-                        <li><strong>Advisor:</strong> Prof. Mohsen Ghasemi</li>
-                    </ul>
-                </td></tr>
-                <tr><td><strong>MS (Algebra)</strong></td><td>Faculty of Mathematical Science, University of Tabriz</td><td>2017 - 2020</td></tr>
-                <tr><td colspan="3">
-                    <ul>
-                        <li><strong>Thesis:</strong> Irreducible characters of even degree and normal Sylow 2-subgroups</li>
-                        <li><strong>Supervisor:</strong> Prof. Kamal Aziziheris</li>
-                    </ul>
-                </td></tr>
-                <tr><td><strong>BS (Mathematics Education)</strong></td><td>Farhangian University</td><td>2013 - 2017</td></tr>
-            </table>
-        </section>
-
-        <section id="research-experience">
-            <h2>Research Experience</h2>
-            <table>
-                <tr><th>Position</th><th>Institution</th><th>Duration</th></tr>
-                <tr><td><strong>Postdoc</strong></td><td>Beijing International Center for Mathematical Research (BICMR), Peking University</td><td>Start: 2026</td></tr>
-                <tr><td><strong>Postdoc</strong></td><td>Department of Pure Mathematics, Tarbiat Modares University</td><td>June 2024 - September 2025</td></tr>
-            </table>
-        </section>
-
-        <section id="research-interests">
-            <h2>Research Interests</h2>
-            <ul>
-                <li><strong>Representation Theory of Finite Groups:</strong> Including ordinary and modular cases.</li>
-                <li><strong>Finite Groups and Their Applications:</strong> Especially in combinatorics.</li>
-                <li><strong>Public Key Cryptosystem Scheme Design:</strong> Using hard computational representation problems.</li>
-            </ul>
-        </section>
-
-        <section id="current-projects">
-            <h2>Current Projects</h2>
-            <ul>
-                <li>Researching π-partial character degrees and their influence on the structure of groups.</li>
-                <li>Engaging with classical number theory problems, applying representation theory approaches.</li>
-                <li>Creating public key cryptosystems.</li>
-                <li>Creating a package for π-partial characters and π-structure of groups in GAP.</li>
-            </ul>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <h3>Journal Articles</h3>
-            <ol>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Monomial Isaacs π-partial characters and derived length,” <em>Journal of Algebra and Its Applications</em>, vol. 24, no. 04, 2550108, 2025. <a href="https://doi.org/10.1142/S0219498825501087" target="_blank" rel="noopener">DOI</a></li>
-                <li>K. Dastouri and A. Iranmanesh, “Primes and degrees of Isaacs π-partial characters,” <em>Communications in Algebra</em>, vol. 53, no. 6, pp. 2523–2527, 2025. <a href="https://doi.org/10.1080/00927872.2024.2446543" target="_blank" rel="noopener">DOI</a></li>
-                <li>K. Dastouri and M. Ghasemi, “Groups with prime power Isaacs π-partial character codegrees,” <em>Journal of Algebra and Its Applications</em>, 2025. <a href="https://doi.org/10.1142/S0219498827500897" target="_blank" rel="noopener">DOI</a></li>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Primes and Degrees of Isaacs π-partial Character II,” (Submitted), 2025.</li>
-            </ol>
-            <h3>Preprints</h3>
-            <ol>
-                <li>K. Dastouri, “Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli,” Cryptology ePrint Archive, Report 2025/1589, 2025. <a href="https://eprint.iacr.org/2025/1589" target="_blank" rel="noopener">ePrint</a></li>
-                <li>K. Dastouri, “A Symmetric Group-Based Public-Key Cryptosystem with Hard-to-Factor One-Way Function,” (submitted).</li>
-                <li>K. Dastouri and A. Iranmanesh, “Some Combinatorial Applications of Symmetric Group Representations,” (submitted).</li>
-                <li>K. Dastouri, “Reconstruction of Permutation Sets from Their Decks Up to Conjugation,”.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Permutations of the Symmetric Group and Hamiltonian Cycles,” (submitted).</li>
-            </ol>
-            <h3>Conference Proceedings</h3>
-            <ol>
-                <li>K. Dastouri and A. Molkhasi, “Pseudocomplements in free groups,” <em>4th Seminar on Algebra and its Applications</em>, August 9–11, 2016.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Primes and degrees of Isaacs π-partial character,” <em>15th International Group Theory Conference of Iran</em>, February 9–10, 2023.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Some results of Isaacs π-partial character degrees,” <em>4th International Conference on Computational Algebra, Computational Number Theory and Applications</em>, July 4–6, 2023.</li>
-                <li>K. Dastouri and A. Iranmanesh, “On monomial Isaacs π-partial characters of π-separable groups,” <em>7th Biennial International Group Theory Conference</em>, August 7–11, 2023.</li>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Groups whose all Isaacs π-partial characters are monomial,” <em>16th International Group Theory Conference of Iran</em>, February 1–2, 2024.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Representation theory of symmetric groups and some combinatorial results,” <em>12th Graph Theory and Algebraic Combinatorics</em>, February 7–8, 2024.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Some results on degrees of monomial characters” (in Persian), <em>55th Annual Iranian Mathematics Conference</em>, August 14–16, 2024.</li>
-                <li>A. Iranmanesh and K. Dastouri, “π-structure and π-characters,” <em>17th International Group Theory Conference of Iran</em>, January 29–30, 2025.</li>
-            </ol>
-        </section>
-
-        <section id="pictures">
-            <h2>Pictures</h2>
-            <div class="pictures">
-                <div class="picture-item">
-                    <img src="p3.jpg" alt="Kaveh Dastouri with Prof. Ali Iranmanesh, 2023">
-                    <p>Me and Prof. Iranmanesh, 2023</p>
-                </div>
-                <div class="picture-item">
-                    <img src="p4.jpg" alt="Kaveh Dastouri with Prof. Mohammad Reza Darafsheh, 2024">
-                    <p>Me and Prof. Darafsheh, 2024</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="references">
-            <h2>References</h2>
-            <div class="references">
-                <p><strong>Prof. Ali Iranmanesh</strong><br>Faculty of Mathematical Science, Tarbiat Modares University<br>Email: <a href="mailto:iranmana@modares.ac.ir">iranmana@modares.ac.ir</a></p>
-                <p><strong>Prof. Mohammad Reza Darafsheh</strong><br>School of Mathematics, Statistics and Computer Science, University of Tehran<br>Email: <a href="mailto:darafsheh@ut.ac.ir">darafsheh@ut.ac.ir</a></p>
-                <p><strong>Dr. Ali Rajaei</strong><br>Faculty of Mathematical Science, Tarbiat Modares University<br>Email: <a href="mailto:alirajaei@modares.ac.ir">alirajaei@modares.ac.ir</a></p>
-            </div>
-        </section>
+        <h1>Welcome</h1>
+        <p style="font-size:1.3em;max-width:800px;margin:2em auto;">
+            I am a postdoctoral researcher in algebra, specializing in representation theory of finite groups.<br>
+            Use the navigation above to explore my academic journey.
+        </p>
     </main>
 
-    <footer>
-        <h2>Contact</h2>
-        <div class="contact-links">
-            <a href="mailto:kavehdastouri45@gmail.com"><i class="fa-solid fa-envelope"></i> kavehdastouri45@gmail.com</a> |
-            <a href="mailto:k.dastouri@modares.ac.ir"><i class="fa-solid fa-envelope"></i> k.dastouri@modares.ac.ir</a> |
-            <a href="https://www.researchgate.net/profile/Kaveh-Dastouri" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> ResearchGate</a> |
-            <a href="https://orcid.org/0000-0001-8075-5515" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> ORCID</a> |
-            <a href="https://scholar.google.com/citations?user=49OkBRkAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Google Scholar</a> |
-            <a href="tel:+989355981867"><i class="fa-solid fa-phone"></i> +989355981867</a>
-        </div>
-        <p><a href="cv.pdf" class="cv-download"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
-        <p>© 2025 Kaveh Dastouri</p>
-    </footer>
+    <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- Core JavaScript – shows only one section at a time -->
     <script>
-        function showSection(id) {
-            document.querySelectorAll('section').forEach(sec => {
-                sec.classList.remove('active');
-            });
-            const target = document.getElementById(id);
-            if (target) {
-                target.classList.add('active');
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            history.pushState(null, null, '#' + id);
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            toggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
-
-        window.addEventListener('load', () => {
-            const hash = location.hash.slice(1) || 'about-me';
-            showSection(hash);
-        });
-
-        window.addEventListener('popstate', () => {
-            const hash = location.hash.slice(1) || 'about-me';
-            showSection(hash);
-        });
+        const backBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => backBtn.style.display = window.scrollY > 400 ? 'block' : 'none');
+        backBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
     </script>
 </body>
 </html>
