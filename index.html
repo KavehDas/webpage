@@ -64,19 +64,19 @@
             <p>Postdoctoral Researcher in Algebra</p>
         </div>
         <nav>
-            <a href="#about-me">About Me</a>
-            <a href="#education">Education</a>
-            <a href="#research-experience">Research Experience</a>
-            <a href="#research-interests">Research Interests</a>
-            <a href="#current-projects">Current Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#pictures">Pictures</a>
-            <a href="#references">References</a>
+            <a href="#about-me"      onclick="show('about-me')">About Me</a>
+            <a href="#education"     onclick="show('education')">Education</a>
+            <a href="#research-experience" onclick="show('research-experience')">Research Experience</a>
+            <a href="#research-interests"  onclick="show('research-interests')">Research Interests</a>
+            <a href="#current-projects"    onclick="show('current-projects')">Current Projects</a>
+            <a href="#publications"        onclick="show('publications')">Publications</a>
+            <a href="#pictures"            onclick="show('pictures')">Pictures</a>
+            <a href="#references"          onclick="show('references')">References</a>
         </nav>
     </header>
 
     <main>
-        <section id="about-me">
+        <section id="about-me" class="active">
             <h2>About Me</h2>
             <p>My name is Kaveh Dastouri, and I was born in Heris, East Azerbaijan, Iran, in 1995. I completed my bachelor’s degree at Farhangian University, followed by a master’s degree in algebra at the University of Tabriz. I then earned my Ph.D. in mathematics at Tarbiat Modares University in Tehran under the supervision of <a href="https://www.modares.ac.ir/~iranmana" target="_blank" rel="noopener">Prof. Ali Iranmanesh</a>. Currently, I am a postdoctoral researcher at Tarbiat Modares University specializing in algebra, focusing on representation theory and finite groups, and I will soon begin a new postdoctoral position at the Beijing International Center for Mathematical Research (BICMR).</p>
         </section>
@@ -269,6 +269,28 @@
             }
             return gk_fileData[filename] || "";
         }
+    </script>
+    function show(id) {
+            document.querySelectorAll('section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.add('active');
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            history.pushState(null, null, '#' + id);
+        }
+
+        window.addEventListener('load', () => {
+            const hash = location.hash.slice(1) || 'about-me';
+            show(hash);
+        });
+
+        window.addEventListener('popstate', () => {
+            const hash = location.hash.slice(1) || 'about-me';
+            show(hash);
+        });
     </script>
 </body>
 </html>
