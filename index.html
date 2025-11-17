@@ -6,27 +6,24 @@
     <meta name="description" content="Kaveh Dastouri, Postdoctoral Researcher in Algebra at Tarbiat Modares University, specializing in representation theory and finite groups.">
     <meta name="keywords" content="Kaveh Dastouri, algebra, representation theory, finite groups, postdoctoral researcher, Tarbiat Modares University, BICMR">
     <meta name="author" content="Kaveh Dastouri">
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://kavehdas.github.io/webpage/">
-    <!-- Open Graph Tags for Social Sharing -->
     <meta property="og:title" content="Kaveh Dastouri - Postdoctoral Researcher in Algebra">
     <meta property="og:description" content="Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups at Tarbiat Modares University.">
     <meta property="og:image" content="https://kavehdas.github.io/webpage/p1.jpg">
     <meta property="og:url" content="https://kavehdas.github.io/webpage/">
     <meta property="og:type" content="website">
-    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kaveh Dastouri - Postdoctoral Researcher in Algebra">
     <meta name="twitter:description" content="Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups at Tarbiat Modares University.">
     <meta name="twitter:image" content="https://kavehdas.github.io/webpage/p1.jpg">
     <title>Kaveh Dastouri - Postdoctoral Researcher in Algebra</title>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="p5.ico">
     <link rel="shortcut icon" href="p5.ico">
     <link rel="apple-touch-icon" href="p5.ico">
-    <!-- Structured Data for SEO -->
+
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -34,15 +31,8 @@
         "name": "Kaveh Dastouri",
         "jobTitle": "Postdoctoral Researcher in Algebra",
         "affiliation": [
-            {
-                "@type": "Organization",
-                "name": "Tarbiat Modares University",
-                "department": "Department of Pure Mathematics"
-            },
-            {
-                "@type": "Organization",
-                "name": "Beijing International Center for Mathematical Research (BICMR)"
-            }
+            {"@type": "Organization", "name": "Tarbiat Modares University", "department": "Department of Pure Mathematics"},
+            {"@type": "Organization", "name": "Beijing International Center for Mathematical Research (BICMR)"}
         ],
         "url": "https://kavehdas.github.io/webpage/",
         "email": "kavehdastouri45@gmail.com",
@@ -55,8 +45,22 @@
         "description": "Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups, currently at Tarbiat Modares University, with an upcoming position at BICMR."
     }
     </script>
+
+    <!-- This CSS hides all sections except the active one -->
+    <style>
+        section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        section.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <div class="header-content">
             <img src="p1.png" alt="Kaveh Dastouri, Postdoctoral Researcher in Algebra" class="profile-pic">
@@ -64,14 +68,14 @@
             <p>Postdoctoral Researcher in Algebra</p>
         </div>
         <nav>
-            <a href="#about-me"      onclick="show('about-me')">About Me</a>
-            <a href="#education"     onclick="show('education')">Education</a>
-            <a href="#research-experience" onclick="show('research-experience')">Research Experience</a>
-            <a href="#research-interests"  onclick="show('research-interests')">Research Interests</a>
-            <a href="#current-projects"    onclick="show('current-projects')">Current Projects</a>
-            <a href="#publications"        onclick="show('publications')">Publications</a>
-            <a href="#pictures"            onclick="show('pictures')">Pictures</a>
-            <a href="#references"          onclick="show('references')">References</a>
+            <a href="#about-me"           onclick="showSection('about-me')">About Me</a>
+            <a href="#education"          onclick="showSection('education')">Education</a>
+            <a href="#research-experience" onclick="showSection('research-experience')">Research Experience</a>
+            <a href="#research-interests" onclick="showSection('research-interests')">Research Interests</a>
+            <a href="#current-projects"   onclick="showSection('current-projects')">Current Projects</a>
+            <a href="#publications"       onclick="showSection('publications')">Publications</a>
+            <a href="#pictures"           onclick="showSection('pictures')">Pictures</a>
+            <a href="#references"         onclick="showSection('references')">References</a>
         </nav>
     </header>
 
@@ -84,64 +88,32 @@
         <section id="education">
             <h2>Education</h2>
             <table>
-                <tr>
-                    <th>Degree</th>
-                    <th>Institution</th>
-                    <th>Year</th>
-                </tr>
-                <tr>
-                    <td><strong>PhD (Algebra)</strong></td>
-                    <td>Faculty of Mathematical Science, Tarbiat Modares University</td>
-                    <td>2020 - 2023</td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <ul>
-                            <li><strong>Thesis:</strong> Monomial characters and structure of finite groups</li>
-                            <li><strong>Supervisor:</strong> Prof. Ali Iranmanesh</li>
-                            <li><strong>Advisor:</strong> Prof. Mohsen Ghasemi</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>MS (Algebra)</strong></td>
-                    <td>Faculty of Mathematical Science, University of Tabriz</td>
-                    <td>2017 - 2020</td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <ul>
-                            <li><strong>Thesis:</strong> Irreducible characters of even degree and normal Sylow 2-subgroups</li>
-                            <li><strong>Supervisor:</strong> Prof. Kamal Aziziheris</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>BS (Mathematics Education)</strong></td>
-                    <td>Farhangian University</td>
-                    <td>2013 - 2017</td>
-                </tr>
+                <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
+                <tr><td><strong>PhD (Algebra)</strong></td><td>Faculty of Mathematical Science, Tarbiat Modares University</td><td>2020 - 2023</td></tr>
+                <tr><td colspan="3">
+                    <ul>
+                        <li><strong>Thesis:</strong> Monomial characters and structure of finite groups</li>
+                        <li><strong>Supervisor:</strong> Prof. Ali Iranmanesh</li>
+                        <li><strong>Advisor:</strong> Prof. Mohsen Ghasemi</li>
+                    </ul>
+                </td></tr>
+                <tr><td><strong>MS (Algebra)</strong></td><td>Faculty of Mathematical Science, University of Tabriz</td><td>2017 - 2020</td></tr>
+                <tr><td colspan="3">
+                    <ul>
+                        <li><strong>Thesis:</strong> Irreducible characters of even degree and normal Sylow 2-subgroups</li>
+                        <li><strong>Supervisor:</strong> Prof. Kamal Aziziheris</li>
+                    </ul>
+                </td></tr>
+                <tr><td><strong>BS (Mathematics Education)</strong></td><td>Farhangian University</td><td>2013 - 2017</td></tr>
             </table>
         </section>
 
         <section id="research-experience">
             <h2>Research Experience</h2>
             <table>
-                <tr>
-                    <th>Position</th>
-                    <th>Institution</th>
-                    <th>Duration</th>
-                </tr>
-                <tr>
-                    <td><strong>Postdoc</strong></td>
-                    <td>Beijing International Center for Mathematical Research (BICMR), Peking University</td>
-                    <td>Start: 2026</td>
-                </tr>
-                <tr>
-                    <td><strong>Postdoc</strong></td>
-                    <td>Department of Pure Mathematics, Tarbiat Modares University</td>
-                    <td>June 2024 - September 2025</td>
-                </tr>
+                <tr><th>Position</th><th>Institution</th><th>Duration</th></tr>
+                <tr><td><strong>Postdoc</strong></td><td>Beijing International Center for Mathematical Research (BICMR), Peking University</td><td>Start: 2026</td></tr>
+                <tr><td><strong>Postdoc</strong></td><td>Department of Pure Mathematics, Tarbiat Modares University</td><td>June 2024 - September 2025</td></tr>
             </table>
         </section>
 
@@ -211,15 +183,9 @@
         <section id="references">
             <h2>References</h2>
             <div class="references">
-                <p><strong>Prof. Ali Iranmanesh</strong><br>
-                Faculty of Mathematical Science, Tarbiat Modares University<br>
-                Email: <a href="mailto:iranmana@modares.ac.ir">iranmana@modares.ac.ir</a></p>
-                <p><strong>Prof. Mohammad Reza Darafsheh</strong><br>
-                School of Mathematics, Statistics and Computer Science, University of Tehran<br>
-                Email: <a href="mailto:darafsheh@ut.ac.ir">darafsheh@ut.ac.ir</a></p>
-                <p><strong>Dr. Ali Rajaei</strong><br>
-                Faculty of Mathematical Science, Tarbiat Modares University<br>
-                Email: <a href="mailto:alirajaei@modares.ac.ir">alirajaei@modares.ac.ir</a></p>
+                <p><strong>Prof. Ali Iranmanesh</strong><br>Faculty of Mathematical Science, Tarbiat Modares University<br>Email: <a href="mailto:iranmana@modares.ac.ir">iranmana@modares.ac.ir</a></p>
+                <p><strong>Prof. Mohammad Reza Darafsheh</strong><br>School of Mathematics, Statistics and Computer Science, University of Tehran<br>Email: <a href="mailto:darafsheh@ut.ac.ir">darafsheh@ut.ac.ir</a></p>
+                <p><strong>Dr. Ali Rajaei</strong><br>Faculty of Mathematical Science, Tarbiat Modares University<br>Email: <a href="mailto:alirajaei@modares.ac.ir">alirajaei@modares.ac.ir</a></p>
             </div>
         </section>
     </main>
@@ -235,42 +201,12 @@
             <a href="tel:+989355981867"><i class="fa-solid fa-phone"></i> +989355981867</a>
         </div>
         <p><a href="cv.pdf" class="cv-download"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
-        <p>&copy; 2025 Kaveh Dastouri</p>
+        <p>© 2025 Kaveh Dastouri</p>
     </footer>
 
-    <script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-            return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-                try {
-                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                    var firstSheetName = workbook.SheetNames[0];
-                    var worksheet = workbook.Sheets[firstSheetName];
-                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                    var filteredData = jsonData.filter(row => row.some(filledCell));
-                    var headerRowIndex = filteredData.findIndex((row, index) =>
-                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                    );
-                    if (headerRowIndex === -1 || headerRowIndex > 25) {
-                        headerRowIndex = 0;
-                    }
-                    var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
-                    csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                    return csv;
-                } catch (e) {
-                    console.error(e);
-                    return "";
-                }
-            }
-            return gk_fileData[filename] || "";
-        }
-    </script>
-    function show(id) {
+    <!-- Core JavaScript – shows only one section at a time -->
+    <script>
+        function showSection(id) {
             document.querySelectorAll('section').forEach(sec => {
                 sec.classList.remove('active');
             });
@@ -284,12 +220,12 @@
 
         window.addEventListener('load', () => {
             const hash = location.hash.slice(1) || 'about-me';
-            show(hash);
+            showSection(hash);
         });
 
         window.addEventListener('popstate', () => {
             const hash = location.hash.slice(1) || 'about-me';
-            show(hash);
+            showSection(hash);
         });
     </script>
 </body>
