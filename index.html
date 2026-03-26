@@ -24,69 +24,124 @@
     <link rel="shortcut icon" href="p5.ico">
     <link rel="apple-touch-icon" href="p5.ico">
 
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Kaveh Dastouri",
-        "jobTitle": "Postdoctoral Fellow at the Beijing International Center for Mathematical Research (BICMR)",
-        "affiliation": [
-            {"@type": "Organization", "name": "Tarbiat Modares University", "department": "Department of Pure Mathematics"},
-            {"@type": "Organization", "name": "Beijing International Center for Mathematical Research (BICMR)"}
-        ],
-        "url": "https://kavehdas.github.io/webpage/",
-        "email": "kavehdastouri45@gmail.com",
-        "sameAs": [
-            "https://www.researchgate.net/profile/Kaveh-Dastouri",
-            "https://orcid.org/0000-0001-8075-5515",
-            "https://scholar.google.com/citations?user=49OkBRkAAAAJ&hl=en"
-        ],
-        "image": "https://kavehdas.github.io/webpage/p1.jpg",
-        "description": "Kaveh Dastouri is a postdoctoral researcher specializing in representation theory and finite groups at the Beijing International Center for Mathematical Research (BICMR)."
-    }
-    </script>
-
+    <!-- Additional styles for the landscape header -->
     <style>
+        /* Override header styles for landscape image */
+        header {
+            position: relative;
+            background-image: url('pic2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Dark overlay for better text readability */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 2em 1em;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 1em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            color: white;
+            margin: 0.5em 0;
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Keep navigation sticky */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #003d5b;
+            padding: 0.75em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Section display control */
         section {
             display: none;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
         }
         section.active {
             display: block;
-            opacity: 1;
         }
+
+        /* Additional styles for awards */
         .award-item {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
         }
         .award-year {
             font-weight: bold;
-            color: #2c3e50;
+            color: #0077b6;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 5px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f5f5f5;
-            font-weight: bold;
-        }
+
+        /* Skill categories */
         .skill-category {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .skill-name {
             font-weight: bold;
             display: inline-block;
-            width: 120px;
+            width: 140px;
         }
         .skill-level {
             color: #666;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header {
+                min-height: 300px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+            .skill-name {
+                width: 110px;
+            }
         }
     </style>
 </head>
@@ -94,50 +149,67 @@
 
     <header>
         <div class="header-content">
-            <img src="p1.png" alt="Kaveh Dastouri, Postdoctoral Fellow at the Beijing International Center for Mathematical Research (BICMR)" class="profile-pic">
+            <img src="p1.png" alt="Kaveh Dastouri" class="profile-pic">
             <h1>Kaveh Dastouri</h1>
             <p>Postdoctoral Fellow at the Beijing International Center for Mathematical Research (BICMR)</p>
         </div>
-        <nav>
-            <a href="#about-me"           onclick="showSection('about-me')">About Me</a>
-            <a href="#education"          onclick="showSection('education')">Education</a>
-            <a href="#research-experience" onclick="showSection('research-experience')">Research Experience</a>
-            <a href="#honors"             onclick="showSection('honors')">Honors & Awards</a>
-            <a href="#research-interests" onclick="showSection('research-interests')">Research Interests</a>
-            <a href="#publications"       onclick="showSection('publications')">Publications</a>
-            <a href="#teaching"           onclick="showSection('teaching')">Teaching</a>
-            <a href="#skills"             onclick="showSection('skills')">Skills</a>
-            <a href="#pictures"           onclick="showSection('pictures')">Pictures</a>
-            <a href="#references"         onclick="showSection('references')">References</a>
-        </nav>
     </header>
+
+    <nav>
+        <a href="#about-me" onclick="showSection('about-me')">About Me</a>
+        <a href="#education" onclick="showSection('education')">Education</a>
+        <a href="#research-experience" onclick="showSection('research-experience')">Research Experience</a>
+        <a href="#honors" onclick="showSection('honors')">Honors & Awards</a>
+        <a href="#research-interests" onclick="showSection('research-interests')">Research Interests</a>
+        <a href="#publications" onclick="showSection('publications')">Publications</a>
+        <a href="#teaching" onclick="showSection('teaching')">Teaching</a>
+        <a href="#skills" onclick="showSection('skills')">Skills</a>
+        <a href="#pictures" onclick="showSection('pictures')">Pictures</a>
+        <a href="#references" onclick="showSection('references')">References</a>
+    </nav>
 
     <main>
         <section id="about-me" class="active">
             <h2>About Me</h2>
-            <p>My name is Kaveh Dastouri, and I was born in Heris, East Azerbaijan, Iran, in 1995. I earned my Ph.D. in mathematics at Tarbiat Modares University in Tehran under the supervision of Prof. Ali Iranmanesh. I completed a postdoctoral position at Tarbiat Modares University (2024–2025), where my research focused on representation theory and finite groups. In December 2025, I began a new postdoctoral appointment at the Beijing International Center for Mathematical Research (BICMR), Peking University, under the supervision of Prof. Jiping Zhang. I will have a research stay at RPTU Kaiserslautern-Landau, Germany (July–December 2026), hosted by Prof. Günter Malle.</p>
+            <p>My name is Kaveh Dastouri, and I was born in Heris, East Azerbaijan, Iran, in 1995. I completed my bachelor's degree at Farhangian University, followed by a master's degree in algebra at the University of Tabriz. I earned my Ph.D. in mathematics at Tarbiat Modares University in Tehran under the supervision of Prof. Ali Iranmanesh. I completed a postdoctoral position at Tarbiat Modares University (2024–2025), where my research focused on representation theory and finite groups. In December 2025, I began a new postdoctoral appointment at the Beijing International Center for Mathematical Research (BICMR), Peking University, under the supervision of Prof. Jiping Zhang. I have been awarded a DAAD Research Grant for a research stay at RPTU Kaiserslautern-Landau, Germany (July–December 2026), hosted by Prof. Günter Malle.</p>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <table>
-                <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
-                <tr><td><strong>PhD (Algebra)</strong></td><td>Tarbiat Modares University, Tehran, Iran</td><td>2020 – 2023</td></tr>
-                <tr><td colspan="3">
-                    <ul>
-                        <li><strong>Thesis:</strong> "Monomial characters and structure of finite groups"</li>
-                        <li><strong>Supervisor:</strong> Prof. Ali Iranmanesh</li>
-                        <li><strong>Advisor:</strong> Prof. Mohsen Ghasemi</li>
-                    </ul>
-                </td></tr>
-                <tr><td><strong>MS (Algebra)</strong></td><td>University of Tabriz, Tabriz, Iran</td><td>2017 – 2020</td></tr>
-                <tr><td colspan="3">
-                    <ul>
-                        <li><strong>Thesis:</strong> "Irreducible characters of even degree and normal Sylow 2-subgroups"</li>
-                        <li><strong>Supervisor:</strong> Prof. Kamal Aziziheris</li>
-                    </ul>
-                </td></tr>
-                <tr><td><strong>BS (Mathematics Education)</strong></td><td>Farhangian University, Iran</td><td>2013 – 2017</td></tr>
+             <table>
+                 <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
+                 <tr>
+                    <td><strong>PhD (Algebra)</strong></td>
+                    <td>Tarbiat Modares University, Tehran, Iran</td>
+                    <td>2020 – 2023</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <ul>
+                            <li><strong>Thesis:</strong> "Monomial characters and structure of finite groups"</li>
+                            <li><strong>Supervisor:</strong> Prof. Ali Iranmanesh</li>
+                            <li><strong>Advisor:</strong> Prof. Mohsen Ghasemi</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>MS (Algebra)</strong></td>
+                    <td>University of Tabriz, Tabriz, Iran</td>
+                    <td>2017 – 2020</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <ul>
+                            <li><strong>Thesis:</strong> "Irreducible characters of even degree and normal Sylow 2-subgroups"</li>
+                            <li><strong>Supervisor:</strong> Prof. Kamal Aziziheris</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>BS (Mathematics Education)</strong></td>
+                    <td>Farhangian University, Iran</td>
+                    <td>2013 – 2017</td>
+                </tr>
             </table>
         </section>
 
@@ -166,17 +238,17 @@
         <section id="honors">
             <h2>Honors and Awards</h2>
             <div class="award-item">
-                <span class="award-year">2026</span><br>
+                <div class="award-year">2026</div>
                 <strong>DAAD Research Grant (German Academic Exchange Service)</strong><br>
                 Competitive research scholarship for a six-month research stay at RPTU Kaiserslautern-Landau, Germany.
             </div>
             <div class="award-item">
-                <span class="award-year">2024</span><br>
+                <div class="award-year">2024</div>
                 <strong>Highest GPA among PhD Students</strong><br>
                 Highest grade point average among algebra PhD students at Tarbiat Modares University.
             </div>
             <div class="award-item">
-                <span class="award-year">2020</span><br>
+                <div class="award-year">2020</div>
                 <strong>Qualified as an "Exceptional Talent" PhD Student</strong><br>
                 Exempt from the entrance exam, Tarbiat Modares University.
             </div>
@@ -195,30 +267,30 @@
             <h2>Publications</h2>
             <h3>Journal Articles</h3>
             <ol>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Monomial Isaacs π-partial characters and derived length,” <em>Journal of Algebra and Its Applications</em>, vol. 24, no. 04, 2550108, 2025. <a href="https://doi.org/10.1142/S0219498825501087" target="_blank" rel="noopener">DOI</a></li>
-                <li>K. Dastouri and A. Iranmanesh, “Primes and degrees of Isaacs π-partial characters,” <em>Communications in Algebra</em>, vol. 53, no. 6, pp. 2523–2527, 2025. <a href="https://doi.org/10.1080/00927872.2024.2446543" target="_blank" rel="noopener">DOI</a></li>
-                <li>K. Dastouri and M. Ghasemi, “Groups with prime power Isaacs π-partial character codegrees,” <em>Journal of Algebra and Its Applications</em>, 2025. <a href="https://doi.org/10.1142/S0219498827500897" target="_blank" rel="noopener">DOI</a></li>
-                <li>K. Dastouri, “A Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli,” <em>Journal of Mathematical Cryptology</em>, (accepted).</li>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Primes and Degrees of Isaacs π-partial Character II,” (submitted), 2025.</li>
+                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, "Monomial Isaacs π-partial characters and derived length," <em>Journal of Algebra and Its Applications</em>, vol. 24, no. 04, 2550108, 2025. <a href="https://doi.org/10.1142/S0219498825501087" target="_blank">DOI</a></li>
+                <li>K. Dastouri and A. Iranmanesh, "Primes and degrees of Isaacs π-partial characters," <em>Communications in Algebra</em>, vol. 53, no. 6, pp. 2523–2527, 2025. <a href="https://doi.org/10.1080/00927872.2024.2446543" target="_blank">DOI</a></li>
+                <li>K. Dastouri and M. Ghasemi, "Groups with prime power Isaacs π-partial character codegrees," <em>Journal of Algebra and Its Applications</em>, 2025. <a href="https://doi.org/10.1142/S0219498827500897" target="_blank">DOI</a></li>
+                <li>K. Dastouri, "A Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli," <em>Journal of Mathematical Cryptology</em>, (accepted).</li>
+                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, "Primes and Degrees of Isaacs π-partial Character II," (submitted), 2025.</li>
             </ol>
             <h3>Preprints</h3>
             <ol>
-                <li>K. Dastouri, “Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli,” Cryptology ePrint Archive, Report 2025/1589, 2025. <a href="https://eprint.iacr.org/2025/1589" target="_blank" rel="noopener">ePrint</a></li>
-                <li>K. Dastouri, “A Symmetric Group-Based Public-Key Cryptosystem with Hard-to-Factor One-Way Function,” (submitted).</li>
-                <li>K. Dastouri and A. Iranmanesh, “Some Combinatorial Applications of Symmetric Group Representations,” (submitted).</li>
-                <li>K. Dastouri, “Reconstruction of Permutation Sets from Their Decks Up to Conjugation.”</li>
-                <li>K. Dastouri and A. Iranmanesh, “Permutations of the Symmetric Group and Hamiltonian Cycles,” (submitted).</li>
+                <li>K. Dastouri, "Symmetric Group-Based Public-Key Cryptosystem with Large Prime Moduli," Cryptology ePrint Archive, Report 2025/1589, 2025. <a href="https://eprint.iacr.org/2025/1589" target="_blank">ePrint</a></li>
+                <li>K. Dastouri, "A Symmetric Group-Based Public-Key Cryptosystem with Hard-to-Factor One-Way Function," (submitted).</li>
+                <li>K. Dastouri and A. Iranmanesh, "Some Combinatorial Applications of Symmetric Group Representations," (submitted).</li>
+                <li>K. Dastouri, "Reconstruction of Permutation Sets from Their Decks Up to Conjugation."</li>
+                <li>K. Dastouri and A. Iranmanesh, "Permutations of the Symmetric Group and Hamiltonian Cycles," (submitted).</li>
             </ol>
             <h3>Conference Proceedings</h3>
             <ol>
-                <li>K. Dastouri and A. Molkhasi, “Pseudocomplements in free groups,” <em>4th Seminar on Algebra and its Applications</em>, August 9–11, 2016.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Primes and degrees of Isaacs π-partial character,” <em>15th International Group Theory Conference of Iran</em>, February 9–10, 2023.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Some results of Isaacs π-partial character degrees,” <em>4th International Conference on Computational Algebra, Computational Number Theory and Applications</em>, July 4–6, 2023.</li>
-                <li>K. Dastouri and A. Iranmanesh, “On monomial Isaacs π-partial characters of π-separable groups,” <em>7th Biennial International Group Theory Conference</em>, August 7–11, 2023.</li>
-                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, “Groups whose all Isaacs π-partial characters are monomial,” <em>16th International Group Theory Conference of Iran</em>, February 1–2, 2024.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Representation theory of symmetric groups and some combinatorial results,” <em>12th Graph Theory and Algebraic Combinatorics</em>, February 7–8, 2024.</li>
-                <li>K. Dastouri and A. Iranmanesh, “Some results on degrees of monomial characters” (in Persian), <em>55th Annual Iranian Mathematics Conference</em>, August 14–16, 2024.</li>
-                <li>A. Iranmanesh and K. Dastouri, “π-structure and π-characters,” <em>17th International Group Theory Conference of Iran</em>, January 29–30, 2025.</li>
+                <li>K. Dastouri and A. Molkhasi, "Pseudocomplements in free groups," <em>4th Seminar on Algebra and its Applications</em>, August 9–11, 2016.</li>
+                <li>K. Dastouri and A. Iranmanesh, "Primes and degrees of Isaacs π-partial character," <em>15th International Group Theory Conference of Iran</em>, February 9–10, 2023.</li>
+                <li>K. Dastouri and A. Iranmanesh, "Some results of Isaacs π-partial character degrees," <em>4th International Conference on Computational Algebra, Computational Number Theory and Applications</em>, July 4–6, 2023.</li>
+                <li>K. Dastouri and A. Iranmanesh, "On monomial Isaacs π-partial characters of π-separable groups," <em>7th Biennial International Group Theory Conference</em>, August 7–11, 2023.</li>
+                <li>K. Dastouri, A. Iranmanesh, and M. Ghasemi, "Groups whose all Isaacs π-partial characters are monomial," <em>16th International Group Theory Conference of Iran</em>, February 1–2, 2024.</li>
+                <li>K. Dastouri and A. Iranmanesh, "Representation theory of symmetric groups and some combinatorial results," <em>12th Graph Theory and Algebraic Combinatorics</em>, February 7–8, 2024.</li>
+                <li>K. Dastouri and A. Iranmanesh, "Some results on degrees of monomial characters" (in Persian), <em>55th Annual Iranian Mathematics Conference</em>, August 14–16, 2024.</li>
+                <li>A. Iranmanesh and K. Dastouri, "π-structure and π-characters," <em>17th International Group Theory Conference of Iran</em>, January 29–30, 2025.</li>
             </ol>
         </section>
 
@@ -284,12 +356,12 @@
         <div class="contact-links">
             <a href="mailto:kavehdastouri45@gmail.com"><i class="fa-solid fa-envelope"></i> kavehdastouri45@gmail.com</a> |
             <a href="mailto:k.dastouri@bicmr.pku.edu.cn"><i class="fa-solid fa-envelope"></i> k.dastouri@bicmr.pku.edu.cn</a> |
-            <a href="https://www.researchgate.net/profile/Kaveh-Dastouri" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> ResearchGate</a> |
-            <a href="https://orcid.org/0000-0001-8075-5515" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> ORCID</a> |
-            <a href="https://scholar.google.com/citations?user=49OkBRkAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Google Scholar</a> |
+            <a href="https://www.researchgate.net/profile/Kaveh-Dastouri" target="_blank"><i class="fa-solid fa-globe"></i> ResearchGate</a> |
+            <a href="https://orcid.org/0000-0001-8075-5515" target="_blank"><i class="fa-solid fa-globe"></i> ORCID</a> |
+            <a href="https://scholar.google.com/citations?user=49OkBRkAAAAJ&hl=en" target="_blank"><i class="fa-solid fa-globe"></i> Google Scholar</a> |
             <a href="tel:+8615611855483"><i class="fa-solid fa-phone"></i> +8615611855483</a>
         </div>
-        <p><a href="cv.pdf" class="cv-download"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
+        <p><a href="cv.pdf" class="cv-download" style="color: #caf0f8; text-decoration: none;"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
         <p>© 2025 Kaveh Dastouri | Last updated: March 2026</p>
     </footer>
 
