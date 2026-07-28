@@ -28,22 +28,32 @@
     <main>
         <section>
             <h2>Pictures</h2>
+            <p class="click-hint">Click on any picture to view it in full size.</p>
+            
             <div class="pictures">
-                <div class="picture-item">
-                    <img src="images/p3.jpg" alt="Kaveh Dastouri with Prof. Ali Iranmanesh, 2023">
+                <div class="picture-item" onclick="openLightbox(this)">
+                    <img src="images/p3.jpg" alt="Me and Prof. Iranmanesh, 2023">
                     <p>Me and Prof. Iranmanesh, 2023</p>
                 </div>
-            <div class="picture-item">
-                    <img src="images/group-photo.jpg" alt="Representations of Finite Groups and Ramifications,Shenzhen, China 2026">
-                    <p>Representations of Finite Groups and Ramifications,Shenzhen, China 2026</p>
-                </div>
-                <div class="picture-item">
-                    <img src="images/p4.jpg" alt="Kaveh Dastouri with Prof. Mohammad Reza Darafsheh, 2024">
+                <div class="picture-item" onclick="openLightbox(this)">
+                    <img src="images/p4.jpg" alt="Me and Prof. Darafsheh, 2024">
                     <p>Me and Prof. Darafsheh, 2024</p>
                 </div>
+                <div class="picture-item" onclick="openLightbox(this)">
+                    <img src="images/group-photo.jpg" alt="Representations of Finite Groups and Ramifications, Shenzhen, China 2026">
+                    <p>Representations of Finite Groups and Ramifications, Shenzhen, China 2026</p>
+                </div>
+                <!-- Add more picture-items here as needed -->
             </div>
         </section>
     </main>
+
+    <!-- Full-Size Image Pop-up Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Full view">
+        <div id="lightbox-caption"></div>
+    </div>
 
     <footer>
         <h2>Contact</h2>
@@ -54,8 +64,26 @@
             <a href="https://orcid.org/0000-0001-8075-5515" target="_blank"><i class="fa-solid fa-globe"></i> ORCID</a> |
             <a href="https://scholar.google.com/citations?user=49OkBRkAAAAJ&hl=en" target="_blank"><i class="fa-solid fa-globe"></i> Google Scholar</a>
         </div>
-        <p>© 2025 Kaveh Dastouri</p>
+        <p>© 2026 Kaveh Dastouri</p>
     </footer>
+
+    <script>
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const caption = element.querySelector('p');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = caption ? caption.textContent : '';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
